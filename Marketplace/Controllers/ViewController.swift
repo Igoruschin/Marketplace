@@ -11,7 +11,7 @@ import UIKit
       
       private var myImageView: UIImageView = {
           var imageView = UIImageView()
-          let myImage = UIImage(named: "cafe1")
+          let myImage = UIImage(named: "ViewController")
           imageView = UIImageView(image: myImage)
           imageView.translatesAutoresizingMaskIntoConstraints = false
           return imageView
@@ -21,10 +21,10 @@ import UIKit
           let button = UIButton()
           button.setTitle("Вход", for: .normal)
           button.layer.cornerRadius = 10
-          button.backgroundColor = .systemTeal
+          button.backgroundColor = #colorLiteral(red: 0.1353955865, green: 0.1372428834, blue: 0.3925223947, alpha: 1)
           button.titleLabel?.font = .systemFont(ofSize: 22, weight: .medium)
-          button.setTitleColor(.black, for: .normal)
-          button.setTitleColor(.white, for: .highlighted)
+          button.setTitleColor(.white, for: .normal)
+          button.setTitleColor(#colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), for: .highlighted)
           button.translatesAutoresizingMaskIntoConstraints = false
           button.addTarget(self, action: #selector(pressBut(sender:)), for: .touchUpInside)
           return button
@@ -65,43 +65,35 @@ import UIKit
     
       private let lb1: UILabel = {
           let label = UILabel()
-          label.textColor = .systemMint
-          label.shadowColor = .black
-          label.shadowOffset = CGSize(width: 3, height: 1)
+          label.textColor = #colorLiteral(red: 0.6264176369, green: 0.7572597861, blue: 0.8323677182, alpha: 1)
           label.text = "Логин"
-          label.font = .systemFont(ofSize: 23, weight: .medium)
+          label.font = .systemFont(ofSize: 21, weight: .medium)
           label.translatesAutoresizingMaskIntoConstraints = false
           return label
       }()
       
       private let lb2: UILabel = {
           let label = UILabel()
-          label.textColor = .systemMint
-          label.shadowColor = .black
-          label.shadowOffset = CGSize(width: 3, height: 1)
+          label.textColor = #colorLiteral(red: 0.6264176369, green: 0.7572597861, blue: 0.8323677182, alpha: 1)
           label.text = "Пароль"
-          label.font = .systemFont(ofSize: 23, weight: .medium)
+          label.font = .systemFont(ofSize: 21, weight: .medium)
           label.translatesAutoresizingMaskIntoConstraints = false
           return label
       }()
       
       private let lb3: UILabel = {
           let label = UILabel()
-          label.textColor = .systemGray6
-          label.shadowColor = .black
-          label.shadowOffset = CGSize(width: 3, height: 3)
+          label.textColor = #colorLiteral(red: 0.1353955865, green: 0.1372428834, blue: 0.3925223947, alpha: 1)
           label.text = "Авторизуйтесь"
           label.textAlignment = .center
-          label.font = .systemFont(ofSize: 26, weight: .bold)
+          label.font = .systemFont(ofSize: 28, weight: .heavy)
           label.translatesAutoresizingMaskIntoConstraints = false
           return label
       }()
     
       private let registrLabel: UILabel = {
           let label = UILabel()
-          label.textColor = .systemGray6
-          label.shadowColor = .black
-          label.shadowOffset = CGSize(width: 3, height: 3)
+          label.textColor = #colorLiteral(red: 0.6264176369, green: 0.7572597861, blue: 0.8323677182, alpha: 1)
           label.text = "Создайте новый аккаунт."
           label.textAlignment = .center
           label.font = .systemFont(ofSize: 18, weight: .regular)
@@ -133,7 +125,7 @@ import UIKit
           view.addSubview(stackView)
           view.addSubview(enterButton)
           stackView.axis = .vertical
-          stackView.spacing = 5
+          stackView.spacing = 2
           stackView.distribution = .fillEqually
           stackView.translatesAutoresizingMaskIntoConstraints = false
           
@@ -168,17 +160,9 @@ import UIKit
         basketVC.title = "Корзина"
         
         let mail = logField.text ?? ""
-      //let password = passField.text ?? ""
+        let password = passField.text ?? ""
         let user = findUsersData(mail: mail)
         
-        
-        tabBarVC.setViewControllers([secondVC, profileVC, basketVC], animated: false)
-        present(tabBarVC, animated: true)
-        
-        guard let activeUser = user else {return}
-        DataBase.shared.saceActiveUser(user: activeUser)
-        
-       /*
         if user == nil {
             alert(title: "Ошибка", message: "Неверный логин!", style: .alert)
         }else if user?.password == password{
@@ -191,14 +175,14 @@ import UIKit
         }else {
             alert(title: "Ошибка", message: "Неверный пароль!", style: .alert)
         }
-        */
+       
     }
       @objc func buttonSignIn(sender: Any){
          let menuVC = MenuViewController()
           self.navigationController?.pushViewController(menuVC, animated: true)
       }
   }
-
+//MARK: - SetConstraints
 extension ViewController{
     func setConstraints(){
         NSLayoutConstraint.activate([

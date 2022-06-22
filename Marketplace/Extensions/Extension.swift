@@ -17,9 +17,9 @@ extension String{
     }
     
     enum Regular: String{
-        case name = "[а-яА-Я]{1,}" //фильтрация имени,фамилии и т.д
-        case email = "[a-zA-Z0-9._]+@[a-zA-Z0-9]+\\.[a-zA-Z]{2,}"//фильтрация почты
-        case password = "(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{6,}"//для пароля
+        case name = "[а-яА-Я]{1,}"
+        case email = "[a-zA-Z0-9._]+@[a-zA-Z0-9]+\\.[a-zA-Z]{2,}"
+        case password = "(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{6,}"
     }
     
     func isValid(validtypes: ValidTypes) -> Bool{
@@ -32,6 +32,5 @@ extension String{
             case .password: regular = Regular.password.rawValue
         }
         return NSPredicate(format: format, regular).evaluate(with: self)
-        
     }
 }

@@ -41,18 +41,21 @@ class SecondViewController: UIViewController {
            let userInfoButton = createCustomButton(selector: #selector(getOutPressButton))
            navigationItem.leftBarButtonItem = userInfoButton
         
-          self.view.backgroundColor = .white
+          self.view.backgroundColor = #colorLiteral(red: 0.9490196109, green: 0.9490197301, blue: 0.9490196109, alpha: 1)
        }
     
-    //MARK: - Methods
+    //MARK: - Methods,setSearchController
     private func setupDelegate() {
            searchController.searchBar.delegate = self
        }
     private func setupSearchController() {
-            searchController.searchBar.placeholder = "Поиск"
-            searchController.obscuresBackgroundDuringPresentation = false
-            searchController.searchResultsUpdater = self
-            definesPresentationContext = true
+        searchController.searchBar.placeholder = "Поиск"
+        searchController.obscuresBackgroundDuringPresentation = false
+        // searchController.searchResultsUpdater = self
+        definesPresentationContext = true
+        //scopeBar
+        searchController.searchBar.scopeButtonTitles = ["Все", "Аксессуары", "Техника"]
+        searchController.searchBar.delegate = self
        }
 
     @objc private func getOutPressButton() {
@@ -63,10 +66,9 @@ class SecondViewController: UIViewController {
 //MARK: - UISearchBarDelegate
 extension SecondViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-          
-        print(searchText)
     }
 }
+//MARK: - SetConstraints
 extension SecondViewController{
     func setConstraints(){
         
@@ -77,12 +79,4 @@ extension SecondViewController{
             catalogCollection.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -8)
         ])
     }
-}
-extension SecondViewController: UISearchResultsUpdating{
-    
-    func updateSearchResults(for searchController: UISearchController) {
-        <#code#>
-    }
-    
-    
 }

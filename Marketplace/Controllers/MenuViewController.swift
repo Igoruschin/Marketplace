@@ -10,6 +10,14 @@ import UIKit
 
 class MenuViewController: UIViewController {
     
+    private var myImageView: UIImageView = {
+        var imageView = UIImageView()
+        let myImage = UIImage(named: "menu")
+        imageView = UIImageView(image: myImage)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     private let scrollView: UIScrollView = {
            let scrollView = UIScrollView()
            scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -18,7 +26,7 @@ class MenuViewController: UIViewController {
        
        private let backgroundView: UIView = {
            let view = UIView()
-           view.backgroundColor = .white
+           view.backgroundColor = #colorLiteral(red: 0.9490196109, green: 0.9490197301, blue: 0.9490196109, alpha: 1)
            view.translatesAutoresizingMaskIntoConstraints = false
            return view
        }()
@@ -173,6 +181,7 @@ class MenuViewController: UIViewController {
               backgroundView.addSubview(elementsStackView)
               backgroundView.addSubview(loginLabel)
               backgroundView.addSubview(signUpButton)
+              backgroundView.addSubview(myImageView)
               elementsStackView.axis = .vertical
               elementsStackView.spacing = 10
               elementsStackView.distribution = .fillProportionally
@@ -356,7 +365,7 @@ class MenuViewController: UIViewController {
               
               NSLayoutConstraint.activate([
                   elementsStackView.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
-                  elementsStackView.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor),
+                  elementsStackView.topAnchor.constraint(equalTo: signUpButton.bottomAnchor,constant: -535),
                   elementsStackView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 20),
                   elementsStackView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: -20)
               ])
@@ -372,6 +381,9 @@ class MenuViewController: UIViewController {
                   signUpButton.heightAnchor.constraint(equalToConstant: 40),
                   signUpButton.widthAnchor.constraint(equalToConstant: 240)
               ])
-        
-    }
-}
+              NSLayoutConstraint.activate([
+                  myImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                  myImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 75)
+              ])
+          }
+      }

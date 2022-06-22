@@ -19,8 +19,8 @@
 		5AA192222847B2FB007FDAF8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA192212847B2FB007FDAF8 /* SecondViewController.swift */; };
 		5AA192242848A2F5007FDAF8 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA192232848A2F5007FDAF8 /* BasketViewController.swift */; };
 		5AA1922A284F4C54007FDAF8 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA19229284F4C54007FDAF8 /* Alerts.swift */; };
-		5AA2F0E62858B51600CCB743 /* ProfileUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2F0E52858B51600CCB743 /* ProfileUserController.swift */; };
-		5AA2F0E82858ED0400CCB743 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2F0E72858ED0400CCB743 /* extension.swift */; };
+		5AA2F0E62858B51600CCB743 /* ProfileUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2F0E52858B51600CCB743 /* ProfileUserView.swift */; };
+		5AA2F0E82858ED0400CCB743 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2F0E72858ED0400CCB743 /* Extension.swift */; };
 		5AA2F0EB285A06F000CCB743 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2F0EA285A06F000CCB743 /* UserDefaults.swift */; };
 		5AA2F0EE285A07C200CCB743 /* UserModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2F0ED285A07C200CCB743 /* UserModels.swift */; };
 /* End PBXBuildFile section */
@@ -59,8 +59,8 @@
 		5AA192212847B2FB007FDAF8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		5AA192232848A2F5007FDAF8 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
 		5AA19229284F4C54007FDAF8 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
-		5AA2F0E52858B51600CCB743 /* ProfileUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserController.swift; sourceTree = "<group>"; };
-		5AA2F0E72858ED0400CCB743 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		5AA2F0E52858B51600CCB743 /* ProfileUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserView.swift; sourceTree = "<group>"; };
+		5AA2F0E72858ED0400CCB743 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		5AA2F0EA285A06F000CCB743 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		5AA2F0ED285A07C200CCB743 /* UserModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,10 +93,8 @@
 		5A942E2F285217ED00C1DC9C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5AA2F0E52858B51600CCB743 /* ProfileUserView.swift */,
 				0CE762A028608D55004BDC47 /* CollectionView.swift */,
-				5AA1921F2847B009007FDAF8 /* ViewController.swift */,
-				5AA192212847B2FB007FDAF8 /* SecondViewController.swift */,
-				5AA192232848A2F5007FDAF8 /* BasketViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -105,7 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				5A942E34285233A900C1DC9C /* MenuViewController.swift */,
-				5AA2F0E52858B51600CCB743 /* ProfileUserController.swift */,
+				5AA1921F2847B009007FDAF8 /* ViewController.swift */,
+				5AA192212847B2FB007FDAF8 /* SecondViewController.swift */,
+				5AA192232848A2F5007FDAF8 /* BasketViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -183,7 +183,7 @@
 		5AA2F0EC285A076700CCB743 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5AA2F0E72858ED0400CCB743 /* extension.swift */,
+				5AA2F0E72858ED0400CCB743 /* Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -321,10 +321,10 @@
 				5AA192222847B2FB007FDAF8 /* SecondViewController.swift in Sources */,
 				5AA2F0EE285A07C200CCB743 /* UserModels.swift in Sources */,
 				5AA192202847B009007FDAF8 /* ViewController.swift in Sources */,
-				5AA2F0E62858B51600CCB743 /* ProfileUserController.swift in Sources */,
+				5AA2F0E62858B51600CCB743 /* ProfileUserView.swift in Sources */,
 				0CE762A128608D55004BDC47 /* CollectionView.swift in Sources */,
 				0CE762A328608F1B004BDC47 /* ItemModels.swift in Sources */,
-				5AA2F0E82858ED0400CCB743 /* extension.swift in Sources */,
+				5AA2F0E82858ED0400CCB743 /* Extension.swift in Sources */,
 				5AA192242848A2F5007FDAF8 /* BasketViewController.swift in Sources */,
 				5AA191F02847A2FF007FDAF8 /* AppDelegate.swift in Sources */,
 				5AA2F0EB285A06F000CCB743 /* UserDefaults.swift in Sources */,

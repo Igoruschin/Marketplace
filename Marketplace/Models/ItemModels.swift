@@ -25,11 +25,14 @@ struct ItemModels {
         let item8 = ItemModels(image: UIImage(named: "item8")!, nameItems: "Тостер", smallDescription: "Техника", cost: 2700)
         let item9 = ItemModels(image: UIImage(named: "item9")!, nameItems: "Ручной Пылесос", smallDescription: "Техника", cost: 15640)
         let item10 = ItemModels(image: UIImage(named: "item10")!, nameItems: "Стакан", smallDescription: "Аксессуары", cost: 500)
+        let item11 = ItemModels(image: UIImage(named: "item11")!, nameItems: "Гриль", smallDescription: "Техника", cost: 5500)
+        let item12 = ItemModels(image: UIImage(named: "item12")!, nameItems: "Мини-печь", smallDescription: "Техника", cost: 10500)
+        let item13 = ItemModels(image: UIImage(named: "item13")!, nameItems: "Очки", smallDescription: "Аксессуары", cost: 1500)
+        let item14 = ItemModels(image: UIImage(named: "item14")!, nameItems: "Бумажник", smallDescription: "Аксессуары", cost: 350)
         
-        return [item1, item2, item3, item4, item5, item6, item7, item8,item9,item10]
+        return [item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14]
     }
 }
-
 struct Const{
     static let leftDist: CGFloat = 8
     static let rightDist: CGFloat =  17
@@ -39,7 +42,3 @@ struct Const{
     static let galleryHeight = (UIScreen.main.bounds.height - Const.leftDist2 - Const.rightDist2 - (Const.gallerySpacing / 2)) / 2
     static let galleryWidth = (UIScreen.main.bounds.width - Const.leftDist - Const.rightDist - (Const.gallerySpacing / 2)) / 2
 }
-
-// static let galleryWidth = (UIScreen.main.bounds.width)
-// - Const.leftDist - Const.rightDist - (Const.gallerySpacing / 2)) / 2
-// /2

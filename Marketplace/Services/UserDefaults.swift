@@ -17,7 +17,6 @@ class DataBase{
         case activeUser
     }
     
-    
     let defaults = UserDefaults.standard
     let userKey = SettingKeys.users.rawValue
     let activeUserKey = SettingKeys.activeUser.rawValue

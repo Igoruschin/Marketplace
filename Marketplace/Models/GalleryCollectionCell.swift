@@ -47,7 +47,7 @@ class GalleryCollectionCell: UICollectionViewCell {
     
     private lazy var buyButton: UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = .systemMint
+        button.backgroundColor = #colorLiteral(red: 0.1353955865, green: 0.1372428834, blue: 0.3925223947, alpha: 1)
         button.setTitle("В Корзину", for: .normal)
         button.setTitleColor(.white, for: .highlighted)
         button.setTitleColor(.white, for: .normal)
@@ -77,18 +77,12 @@ class GalleryCollectionCell: UICollectionViewCell {
         
         constraints()
         backgroundColor = .white
-        
     }
-    @objc func pressLikeButton(_ sender: UIButton){
-        if sender.isEnabled{
-            likeButton.isHighlighted =  true
-        }
-    }
-    @objc func pressInBasket(sender: Any){
-            
-        
-            
-            }
+    
+    @objc func pressLikeButton(_ sender: UIButton){}
+    
+    @objc func pressInBasket(sender: Any){}
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         self.layer.cornerRadius = 5
@@ -97,10 +91,12 @@ class GalleryCollectionCell: UICollectionViewCell {
         layer.shadowOffset = CGSize(width: 3, height: 3)
         self.clipsToBounds = false
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
+//MARK: - SetConstraints
 extension GalleryCollectionCell {
     
     func constraints() {

@@ -72,7 +72,7 @@ class ProfileUserController: UIViewController {
         
         private func setupViews() {
             title = "Профиль"
-            view.backgroundColor = .white
+            view.backgroundColor = #colorLiteral(red: 0.9490196109, green: 0.9490197301, blue: 0.9490196109, alpha: 1)
 
             stackView = UIStackView(arrangedSubviews: [firstNameLabel,
                                                        secondNameLabel,
@@ -87,6 +87,7 @@ class ProfileUserController: UIViewController {
             stackView.distribution = .fillEqually
             stackView.translatesAutoresizingMaskIntoConstraints = false
         }
+
     private func setModel() {
         guard let activeUser = DataBase.shared.activeUser else { return }
         
@@ -100,9 +101,7 @@ class ProfileUserController: UIViewController {
         emailLabel.text = activeUser.email
         passwordLabel.text = activeUser.password
         ageLabel.text = dateString
-    }
-    
-    
+        }
     }
 
     //MARK: - SetConstraints
@@ -111,7 +110,6 @@ class ProfileUserController: UIViewController {
         private func setConstraints() {
 
             NSLayoutConstraint.activate([
-                
                 stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
                 stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
             ])

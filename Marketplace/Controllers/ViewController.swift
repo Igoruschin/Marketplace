@@ -163,6 +163,7 @@ import UIKit
         let password = passField.text ?? ""
         let user = findUsersData(mail: mail)
         
+        
         if user == nil {
             alert(title: "Ошибка", message: "Неверный логин!", style: .alert)
         }else if user?.password == password{
@@ -175,6 +176,7 @@ import UIKit
         }else {
             alert(title: "Ошибка", message: "Неверный пароль!", style: .alert)
         }
+        
        
     }
       @objc func buttonSignIn(sender: Any){

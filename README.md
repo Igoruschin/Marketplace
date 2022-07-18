@@ -6,6 +6,7 @@
  - MVC
  - UserDefaults
  - SwiftLint
+ - No Storyboard
  
  ---
  ![Simulator Screen Shot - iPhone 13 Pro Max - 2022-07-15 at 00 20 45](https://user-images.githubusercontent.com/100344157/179076776-55bebd27-a538-4c87-bf68-36b0b642c557.png)
